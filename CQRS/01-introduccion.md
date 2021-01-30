@@ -10,7 +10,7 @@ Son DTO (Data Trannsfern Object) que tiene sus propiedades representa una accion
 - Son inmutables porque una vez construimos la instancia del command lo modificamos
 - Sirve para Side Deffects sirve para modificar crear, ponmer en cola pero no devuelve nada
 - Puede abarcar todo aquel que cambia el estado, CREAR , ACTUALIZAR
-- Existen Command Sync, Async (para procedimiento costosos)
+- Existen Command Sync, Async (para procedimiento costosos).
 
 ```php
 final class CreateVideoCommand extends Command
