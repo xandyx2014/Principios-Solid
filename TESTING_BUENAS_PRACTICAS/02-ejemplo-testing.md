@@ -9,4 +9,5 @@
 - ....
 ### Test Integracion
 Los test de integracion podemos hacerlo a los repositorios ya q son los que se encargan de la persistencia de los datos
-## Test ACeptacion
+## Test aceptacion
+Simular lo que aria el usuario con la aplicacion
