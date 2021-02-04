@@ -7,6 +7,9 @@
 - src
     - Backoffice
         - Videos
+            - Infraestructure
+            - Aplication
+            - Domain
         - ...
         - Shared
     - Mooc
