@@ -56,8 +56,9 @@ public void Filters_Products_By_Full_Text_Search()
 }
 ```
 
-- Si vamos por la vía de usar muchos parámetros, tendremos el problema de perder legibilidad en el test cuando tengamos varios parámetros del mismo tipo:
+Si vamos por la vía de usar muchos parámetros, tendremos el problema de perder legibilidad en el test cuando tengamos varios parámetros del mismo tipo:
 A veces para solventar esto se introduce un parameter object para agrupar los parámetros y poder ponerles nombre. Esto incluso permite aplicar el patrón builder al parameter object para no tener que indicar todos los parámetros si no son necesarios:
+
 ```java
 [Test]
 public void Some_Invoice_Test()
