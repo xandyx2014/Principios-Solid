@@ -14,5 +14,5 @@ jobs:
           s_max_size: '2'
           m_max_size: '3'
           l_max_size: '4'
-          fail_if_xl: 'false'
+          fail_if_xl: 'true'
           message_if_xl: 'This PR is so big! Please, split it 😊'
