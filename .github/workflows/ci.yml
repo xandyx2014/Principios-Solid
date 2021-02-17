@@ -16,4 +16,4 @@ jobs:
           JOB_CONTEXT: ${{ toJson(job) }}
         run: |
             echo "Job context: $JOB_CONTEXT"
-            echo "DONE !"
+            echo "DONE workflow!"
