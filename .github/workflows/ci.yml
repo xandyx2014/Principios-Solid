@@ -7,6 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+
       - name: Hellow Codelies
         run: echo "Hellow from ${{ github.worflow }} triggerer by the ${{ github.event_name }} done by ${{ github.actor}}"
-  
+
+      - name: ❤ More and More
+        env:
+          JOB_CONTEXT: ${{ toJson(job) }}
+          run: |
+            echo "Job context: $JOB_CONTEXT"
+            echo "DONE !"
