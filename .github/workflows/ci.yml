@@ -29,7 +29,7 @@ jobs:
             echo "Job context: $JOB_CONTEXT"
             echo "DONE workflow!"
       - name: Setup PHP
-        uses: shivammathui/setup-php@v1
+        uses: shivammathur/setup-php@v1
         with:
           php-version: ${{ matrix.php-versions }}
           coverage: none
