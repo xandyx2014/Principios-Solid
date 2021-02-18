@@ -1,15 +1,26 @@
 name: First workflow
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macOS-latest]
+        php-versions: ['7.2', '7.3', '7.4']
+
+
+    name: ${{ matrix.os }} PHP ${{ matrix.php-versions }}
     steps:
       - uses: actions/checkout@v2
 
       - name: Hellow Codelies
         run: echo "Hellow from ${{ github.worflow }} triggerer by the ${{ github.event_name }} done by ${{ github.actor}}"
+     
+      - name: Greeting if windows
+        if: matrix.os == 'windows-latest'
+        run: echo "hey from wind2!"
 
       - name: ❤ More and More
         env:
@@ -17,3 +28,8 @@ jobs:
         run: |
             echo "Job context: $JOB_CONTEXT"
             echo "DONE workflow!"
+      - name: Setup PHP
+        uses: shivammathui/setup-php@v1
+        with:
+          php-version: ${{ matrix.php-versions }}
+          coverage: none
