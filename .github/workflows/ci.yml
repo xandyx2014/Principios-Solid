@@ -21,7 +21,11 @@ jobs:
       - name: Greeting if windows
         if: matrix.os == 'windows-latest'
         run: echo "hey from wind2!"
-
+      - name: Install infra dependencias
+        run: |
+          apt-get install mysql
+          apt-get install php74
+          apt-get install rabbitmq
       - name: ❤ More and More
         env:
           JOB_CONTEXT: ${{ toJson(job) }}
